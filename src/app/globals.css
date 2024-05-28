@@ -3,24 +3,10 @@
 @tailwind utilities;
 
 body {
-  transition: all 0.2s linear;
+  transition: all 0.3s linear;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.42857143;
   background-color: #f6f6f6;
-}
-
-#header-elements {
-  background-color: black;
-  color: white;
-  padding: 0.75rem;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  transition: background-color 0.15s linear;
-}
-
-#header-elements:hover {
-  background-color: #1c1e1e;
-  transition: background-color 0.15s linear;
 }
