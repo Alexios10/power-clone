@@ -3,9 +3,9 @@ import { NavTest } from "../components/NavTest.jsx";
 
 export default function Home() {
   return (
-    <>
+    <main>
       {/* <Navbar /> */}
       <NavTest />
-    </>
+    </main>
   );
 }
