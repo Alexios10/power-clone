@@ -1,84 +1,122 @@
-import React from "react";
-import { CiHeart, CiMenuBurger } from "react-icons/ci";
-import { RiChat3Line } from "react-icons/ri";
-import { IoLocationOutline } from "react-icons/io5";
-import { AiOutlineShopping } from "react-icons/ai";
-import { HiOutlineUser } from "react-icons/hi2";
-import { TfiSearch } from "react-icons/tfi";
-
-import headerLogo from "@/app/assets/header-logo.svg";
 import Image from "next/image";
 import Link from "next/link";
+import headerLogo from "@/app/assets/header-logo.svg";
+
+import { CiHeart, CiMenuBurger } from "react-icons/ci";
+import { IoLocationOutline } from "react-icons/io5";
+import { TfiSearch } from "react-icons/tfi";
+import { RiChat3Line } from "react-icons/ri";
+import { AiOutlineShopping } from "react-icons/ai";
+import { HiOutlineUser } from "react-icons/hi2";
+import { NavButton } from "./NavButton";
 
 export const Navbar = () => {
   return (
-    <nav className="bg-[#292d30] xl:h-[4.4rem] flex justify-center items-center w-full">
-      <div className="absolute z-10 xl:relative bg-[#000] text-white p-3 mr-4 rounded-lg w-[3.6rem] flex justify-center cursor-pointer hover:bg-[#1c1e1e] transition-all 200 ease-linear">
-        <CiMenuBurger size={24} />
-      </div>
-
-      <header className="flex justify-center items-center space-x-4 h-full mr-10">
-        {/* Logo and Input Field */}
-        <div className="relative xl:flex flex-shrink flex-grow items-center">
-          <Link href="/" className="absolute xl:relative xl:mr-3">
-            <Image src={headerLogo} alt="header logo" width={150} />
-          </Link>
-          <div className="flex justify-end items-center xl:space-x-4 xl:justify-end xl:items-center">
-            <input
-              className="rounded-sm h-12 w-screen basis-9/12 mt-[8rem] xl:basis-auto xl:w-[22rem] xl:mt-0 outline-none text-sm pl-2 border-[#c6c8c9]"
-              placeholder="Hva leter du etter?"
-              type="text"
-            />
-            <div className="absolute p-2 cursor-pointer mt-[8rem] xl:mt-0">
-              <TfiSearch size={25} />
-            </div>
-          </div>
+    <>
+      <div className="bg-[#292d30] xl:h-[4.4rem] w-screen flex justify-center items-center fixed flex-wrap">
+        <div className="hidden xl:flex">
+          <NavButton />
         </div>
 
-        {/* Navigation Links */}
-        <ul className="flex items-center space-x-4 absolute w-screen justify-end xl:w-auto xl:h-full xl:relative">
-          {/*  */}
-          <li className="bg-black text-white p-3 rounded-lg hover:bg-[#1c1e1e] transition-all ease-linear cursor-pointer">
-            <Link href="Kundeservice" className="flex space-x-1 items-center">
+        <div className="flex justify-center w-[960px] mr-[6rem] items-center px-4 xl:px-0 h-full py-3 xl:py-4">
+          {/* Left conatiner */}
+          <div className="flex w-full items-start gap-3 mr-4 text-black">
+            <div className="xl:hidden flex">
+              <NavButton />
+            </div>
+            <Link className="sm:shrink-0" href="/">
+              <Image alt="Header Logo" width={150} src={headerLogo} />
+            </Link>
+            <div className="xl:flex w-[30rem] items-center justify-end hidden">
+              <input
+                className="rounded-sm pl-2 h-12 w-full"
+                placeholder="Hva leter du etter?"
+                type="text"
+              />
+              <div className="absolute p-2 mr-2 cursor-pointer xl:mt-0">
+                <TfiSearch size={25} />
+              </div>
+            </div>
+          </div>
+          {/* Left conatiner */}
+
+          {/* Right container */}
+          <div className="flex xl:w-full xl:justify-normal justify-end items-center gap-3 xl:gap-0">
+            <Link
+              className="bg-black text-white w-[3.6rem] p-3 hidden rounded-lg sm:flex justify-center items-center hover:bg-[#1c1e1e] transition-all ease-linear cursor-pointer xl:w-auto xl:mr-4"
+              href="Kundeservice"
+            >
               <span className="hidden xl:block">Kundeservice</span>
               <div>
                 <RiChat3Line className="text-[#ec6608]" size={25} />
               </div>
             </Link>
-          </li>
 
-          <li className="bg-black text-white p-3 rounded-lg hover:bg-[#1c1e1e] transition-all ease-linear cursor-pointer">
-            <Link href="FinnButikk" className="flex space-x-1 items-center">
-              <p className="h-6 items-center hidden xl:block ">Finn butikk</p>
-              <div className="text-[#ec6608]">
+            <Link
+              href="FinnButikk"
+              className="bg-black hidden text-white w-[3.6rem] p-3 rounded-lg sm:flex justify-center items-center hover:bg-[#1c1e1e] transition-all ease-linear cursor-pointer xl:w-auto xl:mr-4"
+            >
+              <span className="hidden xl:flex xl:h-6 items-center">
+                Finn butikk
+              </span>
+              <div className="text-[#ec6608] ">
                 <IoLocationOutline size={25} />
               </div>
             </Link>
-          </li>
 
-          <li className="bg-black text-[#ec6608] p-3 rounded-lg hover:bg-[#1c1e1e] transition-all ease-linear cursor-pointer">
-            <CiHeart size={25} />
-          </li>
+            <div className="bg-black text-[#ec6608] flex justify-center w-[3.6rem] p-3 rounded-lg hover:bg-[#1c1e1e] transition-all ease-linear cursor-pointer xl:mr-4">
+              <CiHeart size={25} />
+            </div>
 
-          <li className="bg-[#ec6608] text-white p-3 rounded-lg hover:bg-orange-700 transition-all ease-linear cursor-pointer">
-            <Link href="Handlekurv" className="flex space-x-1 items-center">
-              <p>Handlekurv</p>
-              <div>
-                <AiOutlineShopping size={25} />
+            <Link
+              href="Handlekurv"
+              className="md:flex items-center hidden bg-[#ec6608] text-white p-3 rounded-lg hover:bg-orange-700 transition-all ease-linear xl:mr-4"
+            >
+              <span>Handlekurv</span>
+              <div className="w-8 h-5 flex justify-center mb-1 items-center">
+                <AiOutlineShopping size={30} />
               </div>
             </Link>
-          </li>
 
-          <li className="bg-black text-white p-3 rounded-lg hover:bg-[#1c1e1e] transition-all ease-linear cursor-pointer">
-            <Link href="MyPower" className="flex space-x-1 items-center">
-              <p>MyPOWER</p>
+            <Link
+              href="MyPower"
+              className="bg-black text-white p-3 rounded-lg flex justify-center hover:bg-[#1c1e1e] transition-all ease-linear cursor-pointer xl:mr-4"
+            >
+              <span className="hidden md:block">MyPOWER</span>
               <div>
                 <HiOutlineUser className="text-[#ec6608]" size={25} />
               </div>
             </Link>
-          </li>
-        </ul>
-      </header>
-    </nav>
+          </div>
+          {/* Right container */}
+        </div>
+
+        {/* Input below XL screen */}
+        <div className="flex w-[960px] mr-[6rem] px-4 gap-3 md:gap-0">
+          <div className="w-full pb-3 flex justify-end items-center cursor-pointer xl:hidden">
+            <input
+              placeholder="Hva leter du etter"
+              className="rounded-sm h-12 pl-2 w-full xl:hidden"
+              type="text"
+            />
+            <button className="absolute p-2 mr-2">
+              <TfiSearch size={25} />
+            </button>
+          </div>
+          <div className="flex items-center pr-1 pb-3">
+            <Link
+              href="Handlekurv"
+              className="flex items-center justify-center md:hidden bg-[#ec6608] text-white p-3 rounded-lg hover:bg-orange-700 transition-all ease-linear xl:mr-4"
+            >
+              <span className="sm:block hidden">Handlekurv</span>
+              <div className="w-8 h-5 flex justify-center mb-1 items-center">
+                <AiOutlineShopping size={30} />
+              </div>
+            </Link>
+          </div>
+        </div>
+        {/* Input below XL screen */}
+      </div>
+    </>
   );
 };
