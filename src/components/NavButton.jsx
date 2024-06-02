@@ -13,13 +13,10 @@ export const NavButton = () => {
       setIsLargeScreen(window.innerWidth >= 1736);
     };
 
-    // Set the initial screen size
     handleResize();
 
-    // Add event listener for window resize
     window.addEventListener("resize", handleResize);
 
-    // Clean up event listener on component unmount
     return () => {
       window.removeEventListener("resize", handleResize);
     };
