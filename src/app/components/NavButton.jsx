@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 
 import { CiMenuBurger } from "react-icons/ci";
-import { SideMenu } from "./SideMenu";
+import { NavSideMenu } from "./NavSideMenu";
 
 export const NavButton = () => {
   const [sideMenu, setSideMenu] = useState(true);
@@ -30,10 +30,10 @@ export const NavButton = () => {
       {sideMenu && (
         <>
           <div
-            className="fixed inset-0 bg-black opacity-50 z-10 2xl:bg-inherit"
+            className="fixed inset-0 bg-black opacity-30 z-10 2xl:-z-10 2xl:bg-inherit"
             onClick={isLargeScreen ? null : toggleMenu}
           ></div>
-          <SideMenu toggleMenu={toggleMenu} />
+          <NavSideMenu toggleMenu={toggleMenu} />
         </>
       )}
 

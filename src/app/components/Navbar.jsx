@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import headerLogo from "@/app/assets/header-logo.svg";
+import headerLogo from "../assets/header-logo.svg";
 
 import { CiHeart, CiMenuBurger } from "react-icons/ci";
 import { IoLocationOutline } from "react-icons/io5";
