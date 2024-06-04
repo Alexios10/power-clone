@@ -30,7 +30,7 @@ import { HiOutlineUser } from "react-icons/hi2";
 
 export const NavSideMenu = ({ toggleMenu }) => {
   return (
-    <div className="fixed top-0 left-0 2xl:left-[6.6rem] w-[300px] max-w-[1200px] h-screen bg-white text-black z-20 flex flex-col">
+    <div className="fixed top-0 left-0 2xl:left-[6.6rem] w-full min-w-[300px]  max-w-[1200px] md:w-[300px] md:max-w-[1200px] h-screen bg-white text-black z-20 flex flex-col">
       {/* Category header */}
       <div className="flex h-[70px] min-h-[70px] w-full items-center text-white font-extrabold bg-[#32373a]">
         <div className="w-[48px] shrink-0 p-4 h-full flex justify-center items-cente">
@@ -49,234 +49,240 @@ export const NavSideMenu = ({ toggleMenu }) => {
       {/* Category header */}
 
       {/* Category list container */}
-      <div className="h-full overflow-auto shadow-lg scrollbar-hide ">
+      <div className="h-full overflow-auto shadow-lg scrollbar-hide">
         <ul className="bg-[#fff] h-full list-none p-0 m-0 w-full">
-          <li className="flex justify-between items-center h-[48px] border-b-[1px] text-sm">
+          <li className="category-button">
             {" "}
-            <Link href="" className="flex w-full h-full">
-              <div className="w-[48px] flex shrink-0 items-center justify-center">
-                <Image src={mobileImg} alt="Mobile logo" />
+            <Link
+              href=""
+              className="flex items-center w-full h-full text-[#41474a]"
+            >
+              <div className="w-[48px] h-full flex justify-center items-center shrink-0">
+                <Image loading="lazy" src={mobileImg} alt="Mobile logo" />
               </div>
-              <span className="w-full items-center flex text-[#41474a]">
-                Mobil &amp; foto
-              </span>
+              <span className="w-full">Mobil &amp; foto</span>
+
+              <div className="arrow-container">
+                <i>
+                  <RiArrowDropRightLine size={32} />
+                </i>
+              </div>
             </Link>
-            <div className="w-[48px] h-full flex p-4 justify-center items-center border-l-2 text-[#41474a]">
-              <i>
-                <RiArrowDropRightLine size={32} />
-              </i>
-            </div>
           </li>
 
-          <li className="flex justify-between items-center h-[48px] border-b-[1px] text-sm">
+          <li className="category-button">
             {" "}
             <Link href="" className="flex w-full h-full">
               <div className="w-[48px] flex shrink-0 items-center justify-center">
-                <Image src={watchImg} alt="Mobile logo" />
+                <Image loading="lazy" src={watchImg} alt="Mobile logo" />
               </div>
               <span className="h-full w-full items-center flex text-[#41474a]">
                 Klokker &amp; trening
               </span>
+              <div className="arrow-container">
+                <i>
+                  <RiArrowDropRightLine size={32} />
+                </i>
+              </div>
             </Link>
-            <div className="w-[48px] h-full flex p-4 justify-center items-center border-l-2 text-[#41474a]">
-              <i>
-                <RiArrowDropRightLine size={32} />
-              </i>
-            </div>
           </li>
 
-          <li className="flex justify-between items-center h-[48px] border-b-[1px] text-sm">
+          <li className="category-button">
             {" "}
             <Link href="" className="flex w-full h-full">
               <div className="w-[48px] flex shrink-0 items-center justify-center">
-                <Image src={computerImg} alt="Mobile logo" />
+                <Image loading="lazy" src={computerImg} alt="Mobile logo" />
               </div>
               <span className="h-full w-full items-center flex text-[#41474a]">
                 Data
               </span>
+              <div className="arrow-container">
+                <i>
+                  <RiArrowDropRightLine size={32} />
+                </i>
+              </div>
             </Link>
-            <div className="w-[48px] h-full flex p-4 justify-center items-center border-l-2 text-[#41474a]">
-              <i>
-                <RiArrowDropRightLine size={32} />
-              </i>
-            </div>
           </li>
 
-          <li className="flex justify-between items-center h-[48px] border-b-[1px] text-sm">
+          <li className="category-button">
             {" "}
             <Link href="" className="flex w-full h-full">
               <div className="w-[48px] flex shrink-0 items-center justify-center">
-                <Image src={gamesImg} alt="Mobile logo" />
+                <Image loading="lazy" src={gamesImg} alt="Mobile logo" />
               </div>
               <span className="h-full w-full items-center flex text-[#41474a]">
                 Gaming
               </span>
+              <div className="arrow-container">
+                <i>
+                  <RiArrowDropRightLine size={32} />
+                </i>
+              </div>
             </Link>
-            <div className="w-[48px] h-full flex p-4 justify-center items-center border-l-2 text-[#41474a]">
-              <i>
-                <RiArrowDropRightLine size={32} />
-              </i>
-            </div>
           </li>
 
-          <li className="flex justify-between items-center h-[48px] border-b-[1px] text-sm">
+          <li className="category-button">
             {" "}
             <Link href="" className="flex w-full h-full">
               <div className="w-[48px] flex shrink-0 items-center justify-center">
-                <Image src={tvImg} alt="Mobile logo" />
+                <Image loading="lazy" src={tvImg} alt="Mobile logo" />
               </div>
               <span className="h-full w-full items-center flex text-[#41474a]">
                 TV &amp; lyd
               </span>
+              <div className="arrow-container">
+                <i>
+                  <RiArrowDropRightLine size={32} />
+                </i>
+              </div>
             </Link>
-            <div className="w-[48px] h-full flex p-4 justify-center items-center border-l-2 text-[#41474a]">
-              <i>
-                <RiArrowDropRightLine size={32} />
-              </i>
-            </div>
           </li>
 
-          <li className="flex justify-between items-center h-[48px] border-b-[1px] text-sm">
+          <li className="category-button">
             {" "}
             <Link href="" className="flex w-full h-full">
               <div className="w-[48px] flex shrink-0 items-center justify-center">
-                <Image src={mdaImg} alt="Mobile logo" />
+                <Image loading="lazy" src={mdaImg} alt="Mobile logo" />
               </div>
               <span className="h-full w-full items-center flex text-[#41474a]">
                 Hvitevarer
-              </span>
+              </span>{" "}
+              <div className="arrow-container">
+                <i>
+                  <RiArrowDropRightLine size={32} />
+                </i>
+              </div>
             </Link>
-            <div className="w-[48px] h-full flex p-4 justify-center items-center border-l-2 text-[#41474a]">
-              <i>
-                <RiArrowDropRightLine size={32} />
-              </i>
-            </div>
           </li>
 
-          <li className="flex justify-between items-center h-[48px] border-b-[1px] text-sm">
+          <li className="category-button">
             {" "}
             <Link href="" className="flex w-full h-full">
               <div className="w-[48px] flex shrink-0 items-center justify-center">
-                <Image src={kitchenAppleancesImg} alt="Mobile logo" />
+                <Image
+                  loading="lazy"
+                  src={kitchenAppleancesImg}
+                  alt="Mobile logo"
+                />
               </div>
               <span className="h-full w-full items-center flex text-[#41474a]">
                 Kjøkkenmaskiner
-              </span>
+              </span>{" "}
+              <div className="arrow-container">
+                <i>
+                  <RiArrowDropRightLine size={32} />
+                </i>
+              </div>
             </Link>
-            <div className="w-[48px] h-full flex p-4 justify-center items-center border-l-2 text-[#41474a]">
-              <i>
-                <RiArrowDropRightLine size={32} />
-              </i>
-            </div>
           </li>
 
-          <li className="flex justify-between items-center h-[48px] border-b-[1px] text-sm">
+          <li className="category-button">
             {" "}
             <Link href="" className="flex w-full h-full">
               <div className="w-[48px] flex shrink-0 items-center justify-center">
-                <Image src={smartHomeImg} alt="Mobile logo" />
+                <Image loading="lazy" src={smartHomeImg} alt="Mobile logo" />
               </div>
               <span className="h-full w-full items-center flex text-[#41474a]">
                 Smarte hjem
               </span>
+              <div className="arrow-container">
+                <i>
+                  <RiArrowDropRightLine size={32} />
+                </i>
+              </div>
             </Link>
-            <div className="w-[48px] h-full flex p-4 justify-center items-center border-l-2 text-[#41474a]">
-              <i>
-                <RiArrowDropRightLine size={32} />
-              </i>
-            </div>
           </li>
 
-          <li className="flex justify-between items-center h-[48px] border-b-[1px] text-sm">
+          <li className="category-button">
             {" "}
             <Link href="" className="flex w-full h-full">
               <div className="w-[48px] flex shrink-0 items-center justify-center">
-                <Image src={homeImg} alt="Mobile logo" />
+                <Image loading="lazy" src={homeImg} alt="Mobile logo" />
               </div>
               <span className="h-full w-full items-center flex text-[#41474a]">
                 Hjem
               </span>
+              <div className="arrow-container">
+                <i>
+                  <RiArrowDropRightLine size={32} />
+                </i>
+              </div>
             </Link>
-            <div className="w-[48px] h-full flex p-4 justify-center items-center border-l-2 text-[#41474a]">
-              <i>
-                <RiArrowDropRightLine size={32} />
-              </i>
-            </div>
           </li>
 
-          <li className="flex justify-between items-center h-[48px] border-b-[1px] text-sm">
+          <li className="category-button">
             {" "}
             <Link href="" className="flex w-full h-full">
               <div className="w-[48px] flex shrink-0 items-center justify-center">
-                <Image src={outdoorImg} alt="Mobile logo" />
+                <Image loading="lazy" src={outdoorImg} alt="Mobile logo" />
               </div>
               <span className="h-full w-full items-center flex text-[#41474a]">
                 Hage &amp; fritid
               </span>
+              <div className="arrow-container">
+                <i>
+                  <RiArrowDropRightLine size={32} />
+                </i>
+              </div>
             </Link>
-            <div className="w-[48px] h-full flex p-4 justify-center items-center border-l-2 text-[#41474a]">
-              <i>
-                <RiArrowDropRightLine size={32} />
-              </i>
-            </div>
           </li>
 
-          <li className="flex justify-between items-center h-[48px] border-b-[1px] text-sm">
+          <li className="category-button">
             {" "}
             <Link href="" className="flex w-full h-full">
               <div className="w-[48px] flex shrink-0 items-center justify-center">
-                <Image src={beautyImg} alt="Mobile logo" />
+                <Image loading="lazy" src={beautyImg} alt="Mobile logo" />
               </div>
               <span className="h-full w-full items-center flex text-[#41474a]">
                 Velvære
               </span>
+              <div className="arrow-container">
+                <i>
+                  <RiArrowDropRightLine size={32} />
+                </i>
+              </div>
             </Link>
-            <div className="w-[48px] h-full flex p-4 justify-center items-center border-l-2 text-[#41474a]">
-              <i>
-                <RiArrowDropRightLine size={32} />
-              </i>
-            </div>
           </li>
 
-          <li className="flex justify-between items-center h-[48px] border-b-[1px] text-sm">
+          <li className="category-button">
             {" "}
             <Link href="" className="flex w-full h-full">
               <div className="w-[48px] flex shrink-0 items-center justify-center">
-                <Image src={kitchenImg} alt="Mobile logo" />
+                <Image loading="lazy" src={kitchenImg} alt="Mobile logo" />
               </div>
               <span className="h-full w-full items-center flex text-[#41474a]">
                 Kjøkken
               </span>
+              <div className="arrow-container">
+                <i>
+                  <RiArrowDropRightLine size={32} />
+                </i>
+              </div>
             </Link>
-            <div className="w-[48px] h-full flex p-4 justify-center items-center border-l-2 text-[#41474a]">
-              <i>
-                <RiArrowDropRightLine size={32} />
-              </i>
-            </div>
           </li>
 
-          <li className="flex justify-between items-center h-[48px] border-b-[1px] text-sm">
+          <li className="category-button">
             {" "}
             <Link href="" className="flex w-full h-full">
               <div className="w-[48px] flex shrink-0 items-center justify-center">
-                <Image src={powerRemoteImg} alt="Mobile logo" />
+                <Image loading="lazy" src={powerRemoteImg} alt="Mobile logo" />
               </div>
               <span className="h-full w-full items-center flex text-[#41474a]">
                 POWER Support
-              </span>
+              </span>{" "}
+              <div className="arrow-container">
+                <i>
+                  <RiArrowDropRightLine size={32} />
+                </i>
+              </div>
             </Link>
-            <div className="w-[48px] h-full flex p-4 justify-center items-center border-l-2 text-[#41474a]">
-              <i>
-                <RiArrowDropRightLine size={32} />
-              </i>
-            </div>
           </li>
 
-          <li className="flex justify-between items-center h-[48px] border-b-[1px] text-sm">
+          <li className="category-button">
             {" "}
             <Link href="" className="flex w-full h-full">
               <div className="w-[48px] flex shrink-0 items-center justify-center">
-                <Image src={eletraImg} alt="Mobile logo" />
+                <Image loading="lazy" src={eletraImg} alt="Mobile logo" />
               </div>
               <span className="h-full w-full items-center flex text-[#41474a]">
                 Strøm
@@ -284,11 +290,11 @@ export const NavSideMenu = ({ toggleMenu }) => {
             </Link>
           </li>
 
-          <li className="flex justify-between items-center h-[48px] border-b-[1px] text-sm">
+          <li className="category-button">
             {" "}
             <Link href="" className="flex w-full h-full">
               <div className="w-[48px] flex shrink-0 items-center justify-center">
-                <Image src={refurbishImg} alt="Mobile logo" />
+                <Image loading="lazy" src={refurbishImg} alt="Mobile logo" />
               </div>
               <span className="h-full w-full items-center flex text-[#41474a]">
                 Pantekalkulator
@@ -296,28 +302,32 @@ export const NavSideMenu = ({ toggleMenu }) => {
             </Link>
           </li>
 
-          <li className="flex justify-between items-center h-[48px] border-b-[1px] text-sm">
+          <li className="category-button">
             {" "}
             <Link href="" className="flex w-full h-full">
               <div className="w-[48px] flex shrink-0 items-center justify-center">
-                <Image src={customerServiceImg} alt="Mobile logo" />
+                <Image
+                  loading="lazy"
+                  src={customerServiceImg}
+                  alt="Mobile logo"
+                />
               </div>
               <span className="h-full w-full items-center flex text-[#41474a]">
                 Kundeservice
-              </span>
+              </span>{" "}
+              <div className="arrow-container">
+                <i>
+                  <RiArrowDropRightLine size={32} />
+                </i>
+              </div>
             </Link>
-            <div className="w-[48px] h-full flex p-4 justify-center items-center border-l-2 text-[#41474a]">
-              <i>
-                <RiArrowDropRightLine size={32} />
-              </i>
-            </div>
           </li>
 
-          <li className="flex justify-between items-center h-[48px] border-b-[1px] text-sm">
+          <li className="category-button">
             {" "}
             <Link href="" className="flex w-full h-full">
               <div className="w-[48px] flex shrink-0 items-center justify-center">
-                <Image src={repowerImg} alt="Mobile logo" />
+                <Image loading="lazy" src={repowerImg} alt="Mobile logo" />
               </div>
               <span className="h-full w-full items-center flex text-[#41474a]">
                 RePOWER
@@ -325,11 +335,11 @@ export const NavSideMenu = ({ toggleMenu }) => {
             </Link>
           </li>
 
-          <li className="flex justify-between items-center h-[48px] border-b-[1px] text-sm">
+          <li className="category-button">
             {" "}
             <Link href="" className="flex w-full h-full">
               <div className="w-[48px] flex shrink-0 items-center justify-center">
-                <Image src={lagerRensingImg} alt="Mobile logo" />
+                <Image loading="lazy" src={lagerRensingImg} alt="Mobile logo" />
               </div>
               <span className="h-full w-full items-center flex text-[#41474a]">
                 Outlet
@@ -337,11 +347,11 @@ export const NavSideMenu = ({ toggleMenu }) => {
             </Link>
           </li>
 
-          <li className="flex justify-between items-center h-[48px] border-b-[1px] text-sm">
+          <li className="category-button">
             {" "}
             <Link href="" className="flex w-full h-full">
               <div className="w-[48px] flex shrink-0 items-center justify-center">
-                <Image src={kundeAvisImg} alt="Mobile logo" />
+                <Image loading="lazy" src={kundeAvisImg} alt="Mobile logo" />
               </div>
               <span className="h-full w-full items-center flex text-[#41474a]">
                 Kundeavis
@@ -349,11 +359,11 @@ export const NavSideMenu = ({ toggleMenu }) => {
             </Link>
           </li>
 
-          <li className="flex justify-between items-center h-[48px] border-b-[1px] text-sm">
+          <li className="category-button">
             {" "}
             <Link href="" className="flex w-full h-full">
               <div className="w-[48px] flex shrink-0 items-center justify-center">
-                <Image src={powerBedriftImg} alt="Mobile logo" />
+                <Image loading="lazy" src={powerBedriftImg} alt="Mobile logo" />
               </div>
               <span className="h-full w-full items-center flex text-[#41474a]">
                 POWER Bedrift
@@ -361,7 +371,7 @@ export const NavSideMenu = ({ toggleMenu }) => {
             </Link>
           </li>
 
-          <li className="flex justify-between items-center h-[48px] border-b-[1px] text-sm">
+          <li className="category-button">
             {" "}
             <Link href="" className="flex w-full h-full">
               <div className="w-[48px] flex shrink-0 items-center justify-center">
@@ -373,20 +383,20 @@ export const NavSideMenu = ({ toggleMenu }) => {
             </Link>
           </li>
 
-          <li className="bg-[#f5f7f7] min-h-[216px]">
+          <div className="bg-[#f5f7f7] min-h-[216px]">
             <li className="flex justify-between items-center h-[48px] border-b-[1px] text-sm">
               {" "}
-              <Link href="" className="flex w-full h-full">
+              <div className="flex w-full h-full">
                 <div className="w-[48px] flex shrink-0 items-center justify-center">
                   <HiOutlineUser className="text-[#ec6608]" size={25} />
                 </div>
                 <span className="h-full w-full items-center flex text-[#41474a]">
                   MyPOWER
                 </span>
-              </Link>
+              </div>
             </li>
 
-            <li className="flex justify-between items-center h-[48px] border-b-[1px] text-sm">
+            <li className="category-button">
               {" "}
               <Link href="" className="flex w-full h-full">
                 <div className="w-[48px] flex shrink-0 items-center justify-center invisible"></div>
@@ -396,7 +406,7 @@ export const NavSideMenu = ({ toggleMenu }) => {
               </Link>
             </li>
 
-            <li className="flex justify-between items-center h-[48px] border-b-[1px] text-sm">
+            <li className="category-button">
               {" "}
               <Link href="" className="flex w-full h-full">
                 <div className="w-[48px] flex shrink-0 items-center justify-center invisible"></div>
@@ -405,7 +415,7 @@ export const NavSideMenu = ({ toggleMenu }) => {
                 </span>
               </Link>
             </li>
-          </li>
+          </div>
         </ul>
       </div>
       {/* Category list container */}

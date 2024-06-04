@@ -9,6 +9,7 @@ import { RiChat3Line } from "react-icons/ri";
 import { AiOutlineShopping } from "react-icons/ai";
 import { HiOutlineUser } from "react-icons/hi2";
 import { NavButton } from "./NavButton";
+import { NavSideMenu } from "./NavSideMenu";
 
 export const Navbar = () => {
   return (
@@ -25,7 +26,12 @@ export const Navbar = () => {
               <NavButton />
             </div>
             <Link className="sm:shrink-0" href="/">
-              <Image alt="Header Logo" width={150} src={headerLogo} />
+              <Image
+                loading="lazy"
+                alt="Header Logo"
+                width={150}
+                src={headerLogo}
+              />
             </Link>
             <div className="xl:flex w-[30rem] items-center justify-end hidden">
               <input

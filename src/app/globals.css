@@ -16,3 +16,17 @@ body {
   overflow-x: hidden;
   /* background: #808080; */
 }
+
+@layer components {
+  .category-button {
+    @apply flex justify-between items-center relative h-[48px] border-b-[1px] text-sm  hover:bg-[#dddddd] hover:z-20;
+  }
+
+  .arrow-container {
+    @apply w-[48px] flex p-4 justify-center items-center border-l-2 text-[#41474a];
+  }
+
+  .category-button:hover .arrow-container {
+    @apply border-transparent;
+  }
+}
