@@ -27,19 +27,18 @@ import { TfiClose } from "react-icons/tfi";
 import { RiArrowDropRightLine, RiArrowDropLeftLine } from "react-icons/ri";
 import { IoLocationOutline } from "react-icons/io5";
 import { HiOutlineUser } from "react-icons/hi2";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 export const NavSideMenu = ({ toggleMenu }) => {
   return (
     <>
       <motion.div
-        initial={{ x: -500 }}
+        initial={{ x: -600 }}
         animate={{ x: 0 }}
-        exit={{ x: -500 }}
+        exit={{ x: -600 }}
         transition={{
           duration: 0.4,
           ease: "easeInOut",
-          exit: { duration: 0.2 },
         }}
         className="fixed top-0 left-0 2xl:left-[6.5rem] w-full min-w-[300px]  max-w-[1200px] md:w-[300px] md:max-w-[1200px] h-screen bg-white text-black z-20 flex flex-col"
       >

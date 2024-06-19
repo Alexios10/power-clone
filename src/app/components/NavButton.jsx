@@ -6,7 +6,7 @@ import { NavSideMenu } from "./NavSideMenu";
 import { motion, AnimatePresence } from "framer-motion";
 
 export const NavButton = () => {
-  const [sideMenu, setSideMenu] = useState(true);
+  const [sideMenu, setSideMenu] = useState(false);
   const [isLargeScreen, setIsLargeScreen] = useState(false);
 
   const handleResize = () => {
@@ -14,16 +14,20 @@ export const NavButton = () => {
   };
 
   useEffect(() => {
-    handleResize();
+    // Initial screen size check to set the initial state of sideMenu
+    const isLarge = window.innerWidth >= 1736;
+    setSideMenu(isLarge);
+    setIsLargeScreen(isLarge);
+
     window.addEventListener("resize", handleResize);
     return () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
 
-  function toggleMenu() {
-    setSideMenu(!sideMenu);
-  }
+  const toggleMenu = () => {
+    setSideMenu((prev) => !prev);
+  };
 
   return (
     <>
@@ -37,7 +41,6 @@ export const NavButton = () => {
               transition={{
                 duration: 0.4,
                 ease: "easeInOut",
-                exit: { duration: 0.2 },
               }}
             />
             <NavSideMenu key="nav-side-menu" toggleMenu={toggleMenu} />
@@ -47,14 +50,7 @@ export const NavButton = () => {
 
       <button
         onClick={toggleMenu}
-        className="bg-black text-white mr-28 hidden xl:flex items-center xl:justify-center p-3 rounded-lg w-[3.6rem] hover:bg-[#1c1e1e] transition-all 200 ease-linear"
-      >
-        <CiMenuBurger size={24} />
-      </button>
-
-      <button
-        onClick={toggleMenu}
-        className="bg-black text-white shrink-0 xl:hidden flex justify-center items-center mr-3 p-3 rounded-lg w-[3.6rem] hover:bg-[#1c1e1e] transition-all 200 ease-linear"
+        className="bg-black text-white mr-28 flex items-center justify-center p-3 rounded-lg w-[3.6rem] hover:bg-[#1c1e1e] transition-all 200 ease-linear"
       >
         <CiMenuBurger size={24} />
       </button>
