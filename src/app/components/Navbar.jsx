@@ -10,16 +10,39 @@ import { AiOutlineShopping } from "react-icons/ai";
 import { HiOutlineUser } from "react-icons/hi2";
 import { NavButton } from "./NavButton";
 
+const links = [
+  {
+    name: "Kundeservice",
+    icon: <RiChat3Line size={25} />,
+  },
+  {
+    name: "Finn butikk",
+    icon: <IoLocationOutline size={25} />,
+  },
+  {
+    name: "Heart",
+    icon: <CiHeart size={25} />,
+  },
+  {
+    name: "Handlekurv",
+    icon: <AiOutlineShopping size={25} />,
+  },
+  {
+    name: "MyPOWER",
+    icon: <HiOutlineUser size={25} />,
+  },
+];
+
 export const Navbar = () => {
   return (
     <>
-      {/* Main container */}
+      {/* main container */}
       <div className="bg-[#292d30] xl:h-[4.4rem] w-screen flex justify-center items-center fixed">
         {/* <div className="hidden w-0 xl:flex mr-[3.7rem]">
           <NavButton />
         </div> */}
 
-        {/* Content conatiner */}
+        {/* content conatiner */}
         <div className="flex flex-wrap grow sm:max-w-[960px] xl:max-w-[1100px] w-screen px-4 h-full py-3">
           <div className="flex w-full gap-3 text-black">
             <div className="w-14 xl:absolute xl:mx-[-5rem]">
@@ -44,10 +67,25 @@ export const Navbar = () => {
               </div>
             </div>
 
-            {/* Links */}
+            {/* links */}
+
+            {/* links map */}
+            {/* <div className="flex items-center gap-3 xl:gap-0">
+              {links.map((link, idx) => {
+                return (
+                  <ul key={idx}>
+                    <li className="bg-black text-white w-[3.6rem] p-3  rounded-lg sm:flex justify-center items-center hover:bg-[#1c1e1e] transition-all ease-linear cursor-pointer xl:w-auto xl:mr-4">
+                      <span className="hidden xl:block">{link.name}</span>
+                      <div className="text-[#ec6608]">{link.icon}</div>
+                    </li>
+                  </ul>
+                );
+              })}
+            </div> */}
+
             <div className="flex gap-3 xl:gap-0 xl:w-full">
               <Link
-                className="bg-black text-white w-[3.6rem] p-3 hidden rounded-lg sm:flex justify-center items-center hover:bg-[#1c1e1e] transition-all ease-linear cursor-pointer xl:w-auto xl:mr-4"
+                className="bg-black text-white hidden w-[3.6rem] p-3 rounded-lg sm:flex justify-center items-center hover:bg-[#1c1e1e] transition-all ease-linear cursor-pointer xl:w-auto xl:mr-4"
                 href="Kundeservice"
               >
                 <span className="hidden xl:block">Kundeservice</span>
@@ -58,7 +96,7 @@ export const Navbar = () => {
 
               <Link
                 href="FinnButikk"
-                className="bg-black hidden text-white w-[3.6rem] p-3 rounded-lg sm:flex justify-center items-center hover:bg-[#1c1e1e] transition-all ease-linear cursor-pointer xl:w-auto xl:mr-4"
+                className="bg-black text-white hidden w-[3.6rem] p-3 rounded-lg sm:flex justify-center items-center hover:bg-[#1c1e1e] transition-all ease-linear cursor-pointer xl:w-auto xl:mr-4"
               >
                 <span className="hidden xl:flex xl:h-6 items-center">
                   Finn butikk
@@ -92,7 +130,7 @@ export const Navbar = () => {
                 </div>
               </Link>
             </div>
-            {/* Links end */}
+            {/* links end */}
           </div>
 
           {/* Input below XL screen */}
@@ -119,7 +157,7 @@ export const Navbar = () => {
               </Link>
             </div>
           </div>
-          {/* Input below XL screen end */}
+          {/* input below XL screen */}
         </div>
       </div>
     </>

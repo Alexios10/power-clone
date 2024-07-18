@@ -37,9 +37,11 @@ export const NavButton = () => {
             <motion.div
               className="fixed inset-0 bg-black opacity-30 z-10 2xl:-z-10 2xl:bg-inherit"
               onClick={isLargeScreen ? null : toggleMenu}
-              exit={{ opacity: 0 }}
+              exit={{
+                opacity: 0,
+              }}
               transition={{
-                duration: 0.4,
+                duration: 0.3,
                 ease: "easeInOut",
               }}
             />

@@ -33,11 +33,16 @@ export const NavSideMenu = ({ toggleMenu }) => {
   return (
     <>
       <motion.div
-        initial={{ x: -600 }}
+        initial={{ x: -900 }}
         animate={{ x: 0 }}
-        exit={{ x: -600 }}
+        exit={{
+          x: -900,
+          width: 0,
+          transition: { duration: 0.3, delay: 0, ease: "easeInOut" },
+        }}
         transition={{
-          duration: 0.4,
+          duration: 0.3,
+          delay: 0.3,
           ease: "easeInOut",
         }}
         className="fixed top-0 left-0 2xl:left-[6.5rem] w-full min-w-[300px]  max-w-[1200px] md:w-[300px] md:max-w-[1200px] h-screen bg-white text-black z-20 flex flex-col"
