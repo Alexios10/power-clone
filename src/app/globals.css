@@ -23,7 +23,7 @@ body {
   }
 
   .arrow-container {
-    @apply w-[48px] flex p-4 justify-center items-center border-l-2 text-[#41474a];
+    @apply w-[48px] flex p-4 justify-center cursor-pointer items-center h-full border-l-2 text-[#41474a];
   }
 
   .category-button:hover .arrow-container {
